@@ -2,11 +2,11 @@
 
 ===	ROS Nedir?
 
-ROS(Robot Operating System), isminden işletim sistemi gibi anlaşılsa da aslında değildir. ROS bilgisayar üzerinden robot bileşenlerini kontrol etmemizi sağlan BSD lisanslı bir yazılım sistemdir. Açık kaynak kodlu bir yazılımdır ve ROS’u kullanabilmemiz için Linux tabanlı bir işletim sistemine ihtiyaç vardır. 
+ROS(Robot Operating System), isminden işletim sistemi gibi anlaşılsa da aslında değildir. ROS bilgisayar üzerinden robot bileşenlerini kontrol etmemizi sağlan BSD lisanslı bir yazılım sistemdir. Açık kaynak kodlu bir yazılımdır ve ROS’u kullanabilmemiz için Linux tabanlı bir işletim sistemine ihtiyaç vardır. Bu uygulamanın amacı robot ve programcı arasındaki ilişkiyi sağlamak ve belirli bir standart oluşturmaktır. ROS içinde barındırdığı standart kütüphanelerin ve desteklediği cihazların dışında, geliştiricler tarafından yazılmış kütüphanelere ve sürücülere de destek verdiği için her geçen gün kapsamını arttırmakta ve robot dünyasında standart konumunu almaktadır.
 
 === ROS Ne İşe Yarar?
 
-ROS robotlarda yaygın olarak kullanılan bir yazılımdır. Kod üzerinden çok az değişiklik yaparak diğer robotlar üzerinde de çalışabilecek bir yazılım parçası geliştirmeyi hedefler. Açık kaynak kodlu olmasından dolayı size sunduğu “ros-pkg” topluluk deposunda güçlü araçlara sahiptir bu sayede sizi her seferinde tekerleği icat etmenizden kurtarır. 
+ROS robotlarda yaygın olarak kullanılan bir yazılımdır. Kod üzerinden çok az değişiklik yaparak diğer robotlar üzerinde de çalışabilecek bir yazılım parçası geliştirmeyi hedefler. ROS sayesinde standart bir robot için yazılan standart bir algoritma yükle-kullan hızında çalıştırılabilir konumda olacaktır. Robota takılan sensörlerden alınan veri ROS ile bilgisayara ulaşacaktır, bilgisayarda işlenen veri robota bir görev olarak geri dönebilecektir. Aradaki bu haberleşme sistemi ROS arayüzündeki topicler ve mesajlar yardımıyla yapılacaktır. ROS, Gazebo simülasyon ortamıyla tam uyumlu olarak çalışmaktadır. Bu sayede projenin prototip aşamasında ROS Package haline getirilen geliştirilen veri yapısını test etmek için  Gazebo simülasyon ortamı hızlı bir geliştirme için kullanılabilir.
 
 === ROS’un Tarihçesi
 
@@ -42,7 +42,11 @@ Robotik uygulamaları oluşturmak için oluşturulmuş .NET tabanlı programlama
 
 ==== Neden ROS?
 
-Neden diğer X yazılımı değil de ROS? Bu soru birçok cevaba sahiptir. Bu cevaplar maddeler halinde aşağıda listelenmiştir.
+Neden diğer X yazılımı değil de ROS? Bu soru birçok cevaba sahiptir. Kısa ve net bir cevap şu şekilde olabilir.
+
+ROS ( Robot Operating System ) adının çağrıştırdığının aksine işletim sisteminden ziyade bir arayüz olarak tanımlayabileceğimiz bir uygulamadır. Bu uygulamanın amacı robot ve programcı arasındaki ilişkiyi sağlamak ve belirli bir standart oluşturmaktır. ROS içinde barındırdığı standart kütüphanelerin ve desteklediği cihazların dışında, geliştiricler tarafından yazılmış kütüphanelere ve sürücülere de destek verdiği için her geçen gün kapsamını arttırmakta ve robot dünyasında standart konumunu almaktadır. ROS’un sunduğu bir diğer avantaj ise yazılan kodlar her robota ayrı olarak yazılmasının yerine bir kere yazılan kodun desteklenen bütün cihazlarda çalıştırılabilmesidir. Bu şekilde alınan standart bir robot için yazılan standart bir algoritma yükle-kullan hızında çalıştırılabilir konumda olacaktır. Robota takılan sensörlerden alınan veri ROS ile bilgisayara ulaşacaktır, bilgisayarda işlenen veri robota bir görev olarak geri dönebilecektir. Aradaki bu haberleşme sistemi ROS arayüzündeki topicler ve mesajlar yardımıyla yapılacaktır. ROS, Gazebo simülasyon ortamıyla tam uyumlu olarak çalışmaktadır. Bu sayede projenin prototip aşamasında ROS Package haline getirilen geliştirilen veri yapısını test etmek için  Gazebo simülasyon ortamı hızlı bir geliştirme için kullanılabilir.
+
+Diğer avantajları maddeler halinde aşağıda listelenmiştir.
 
 •	ROS’un amacı kodu desteklemek olduğu için yeniden kullanımlığı arttırır ve size her projede tekerleği sıfırdan icat etmeniz konusunda diretmez.
 •	İki işletim sistemi arasında çalışabilir. Örneğin; robot üzerinden oluşturduğunuz ROS Master’a Windows üzerinde kurulu olan MATLAB’tan robota kod gönderebilir ve robottan geriye veri döndürebilirsiniz. Bu sadece ROS sizi sadece Linux kullanmaya zorlamaz ve diğer işletim sistemlerinin sunduğu kolaylıklardan da yararlanabilirsiniz.
@@ -183,6 +187,7 @@ Sensör verilerini almak ve kontrol yazılımında işlemek oldukça basittir.
 Gazebo projesi 2002 yılında California’da Dr. Andrew Howard ve öğrencisi Nate Koenig tarafından başlatılmıştır. Linux ortamında geliştirilmiştir. 2009 yılında ise Jhon Hsu tarafından ROS ve PR2 Gazeboya entegre edilmiştir. Bu entegre sürecinden sonra Gazebo gittikçe tercih edilen bir simülatör olma özelliğini kazanmıştır. Apache 2.0 lisansıyla lisanslanmıştır.
 Hem kapalı hem açık mekanlar için geliştirilmiş açık kaynak kodlu, ücretsiz bir robot deney ortamıdır. Birden fazla robotu 3D ortamda simüle edebilme özelliğine sahiptir. V-REP gibi ODE, Bullet, Simbody, DART gibi kütüphaneleri sayesinde fiziksel ortamı işlemekte çok fazla yeteneklidir. Sahneleme işlemini ise açık kaynak kodlu grafik motoru OGRE’yi kullanmaktadır. Sahnelemede en iyi performansı NVIDIA GPU’lar vermektedir. 
 Gazebonun mimari yapısı ise diğer simülatörlere göre daha net bir şekilde işlevselleşmiştir. Her işlev farklı kütüphanelerle birbirinden farklı kılınmıştır.
+
 •	Fizik
 •	Sahneleme
 •	Sensör
