@@ -18,7 +18,7 @@ Bir ROS sistemi yayınlama/abone mesajlaşma modelini kullanarak diğer düğüm
 
  
  
-Şekil 1 [33]12312333333333333333333333
+image::images/calismaMantigi.png[] 
 
 
 ==== ROS’un Alternatifleri
@@ -193,6 +193,9 @@ Gazebonun mimari yapısı ise diğer simülatörlere göre daha net bir şekilde
 •	Sensör
 •	Taşıma
 •	GUI
+
+
+image::images/gazeboF.png[] 
 
 Gazebo temelinde istemci sunucu ilişkisiyle çalışmaktadır. Sunucu(gzserver) fiziksel işlemleri yaparken(robot ortamı gezerken), istemci(gzclient) kullanıcının etkileşimini ve simülasyonun görselleştirilmesini sağlar.  
 Gazebonun kullanıcı arayüzü ise V-REP simülasyon ortamına göre daha az gelişmiştir. Ancak ROS’un içerisinde entegreli olması V-REP ile arasındaki farkı kapatmaktadır.  
